@@ -1,5 +1,5 @@
 {
-    "name":         "knplabs/gaufrette",
+    "name":         "abidon/gaufrette",
     "type":         "library",
     "description":  "PHP5 library that provides a filesystem abstraction layer",
     "keywords":     ["file", "filesystem", "media", "abstraction"],
@@ -14,6 +14,10 @@
         {
             "name":     "The contributors",
             "homepage": "http://github.com/knplabs/Gaufrette/contributors"
+        },
+        {
+            "name":    "Aurélien Bidon",
+            "homepage": "http://cv.orelbe.com"
         }
     ],
     "repositories": [
