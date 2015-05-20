@@ -113,13 +113,13 @@ class Filesystem
      *
      * @return integer The number of bytes that were written into the file
      */
-    public function write($key, $content, $overwrite = false)
+    public function write($key, $content, $overwrite = false, $append = false)
     {
-        if (!$overwrite && $this->has($key)) {
+        if (!$overwrite && !$append && $this->has($key)) {
             throw new Exception\FileAlreadyExists($key);
         }
 
-        $numBytes = $this->adapter->write($key, $content);
+        $numBytes = $this->adapter->write($key, $content, $append);
 
         if (false === $numBytes) {
             throw new \RuntimeException(sprintf('Could not write the "%s" key content.', $key));

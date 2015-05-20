@@ -27,7 +27,7 @@ interface Adapter
      *
      * @return integer|boolean The number of bytes that were written into the file
      */
-    public function write($key, $content);
+    public function write($key, $content, $append);
 
     /**
      * Indicates whether the file exists
